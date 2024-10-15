@@ -1,0 +1,10 @@
+mlflow
+transformers
+langchain
+psutil
+chromadb
+torch
+torch-geometric
+DataLoader
+pandas
+pillow
