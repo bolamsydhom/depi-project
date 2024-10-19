@@ -39,9 +39,9 @@ def RAG_Chain(pdf_file,question):
     # Create HuggingFace embeddings and vector store
     embedding_model_name = 'sentence-transformers/all-MiniLM-L6-v2'  # Efficient model suitable for most tasks
     embeddings = HuggingFaceEmbeddings(model_name=embedding_model_name)
-    __import__('pysqlite3')
+    # __import__('pysqlite3')
     import sys
-    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+    # sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
     import chromadb
 
     chromadb.api.client.SharedSystemClient.clear_system_cache()
