@@ -14,9 +14,13 @@ from langchain.document_loaders import PyPDFLoader
 from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.llms import HuggingFacePipeline
+import os
+# Specify tracking server
+mlflow_tracking_uri = os.getenv('MLFLOW_TRACKING_URI', 'http://127.0.0.1:5003')
+mlflow.set_tracking_uri(mlflow_tracking_uri)
 
 # Load PDFs from a directory
-pdf_directory = './Data'  # Update this path to your PDFs
+pdf_directory = './Application'  # Update this path to your PDFs
 pdf_files = glob.glob(f'{pdf_directory}/*.pdf')
 
 docs = []

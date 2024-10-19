@@ -5,7 +5,7 @@ import mlflow
 import mlflow.pytorch
 import torchvision.transforms as transforms
 from PIL import Image
-from model import MyModel  # Your custom model
+from RAG_GGUF import RAG_Chain as MyModel  # Your custom model
 from utils import log_results  # Utility function to log metrics
 
 # Set device

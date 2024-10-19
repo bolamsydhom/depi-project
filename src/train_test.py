@@ -11,7 +11,7 @@ import os
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # Specify MLflow tracking server
-mlflow_tracking_uri = os.getenv('MLFLOW_TRACKING_URI', 'http://127.0.0.1:5000')
+mlflow_tracking_uri = os.getenv('MLFLOW_TRACKING_URI', 'http://127.0.0.1:5001')
 mlflow.set_tracking_uri(mlflow_tracking_uri)
 
 # Load pre-trained model
